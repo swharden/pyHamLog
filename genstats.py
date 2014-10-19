@@ -1,3 +1,11 @@
+## Created 2012 by Scott Harden, AJ4VD
+## Updated October 19, 2014 by Andrew Milluzzi, KK4LWR
+
+## Edits:
+## - Updated logging date
+
+## Instructions: Update to start of Contest. See instructions on around line 130.
+
 import sqlite3
 import time
 import pylab

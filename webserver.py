@@ -1,3 +1,10 @@
+## Created 2012 by Scott Harden, AJ4VD
+## Updated October 19, 2014 by Andrew Milluzzi, KK4LWR
+
+## Edits:
+## - Fixed bug when running "deleteAll" that cased page not log
+## - Changed "deleteAll" page to point back to admin panel instead of log
+
 from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandler
 from SocketServer import ThreadingMixIn
 import threading
@@ -159,11 +166,12 @@ class Handler(BaseHTTPRequestHandler):
             msg+='<a href="act-delsure-%s">YES, DELETE IT!</a>'%theID
 
         elif "deleteAll" in self.path:
+            #theID=self.path.split("-")[-1]
             logger=collLogger()
             logger.delEverything()
             logger.disconnect()
-            msg+='<br><br><h2>DELETED EVERYTHING!!!<h2>'%theID
-            msg+='<a href="viewlog">return to log</a>'
+            msg+='<br><br><h2>DELETED EVERYTHING!!!<h2>'
+            msg+='<a href="adminsrock.html">return to admin page</a>'
             
         elif "act-delsure" in self.path:
             theID=self.path.split("-")[-1]
