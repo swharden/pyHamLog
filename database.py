@@ -1,3 +1,10 @@
+## Created 2012 by Scott Harden, AJ4VD
+## Updated October 19, 2014 by Andrew Milluzzi, KK4LWR, andy@gatorradio.org
+## Report bugs to: andy@gatorradio.org
+
+## Edits:
+## - Added instructions for updating for non SCR contests
+
 import sqlite3
 import time
 
@@ -27,6 +34,8 @@ class collLogger():
         header=[header.split(",")]
         return header+results
 
+		
+## Update the section below for contest, class, and callsign
     def logCabrillo(self):
         out=""
         out+="START-OF-LOG: 3.0\nCONTEST: ARRL-SCR\nCATEGORY-STATION: CLASS-S-UN\nCALLSIGN: W4DFU\n"
