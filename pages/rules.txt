@@ -1,0 +1,15 @@
+
+QSO points = 1 for phone, 2 for other
+multiplier = states + provinces + countries + 2*clubs + 5*schools
+FINAL SCORE = QSO points * multiplier
+
+
+
+
+id, date, time, band, mode, qso-call, rst-sent, rst-got, operator, state, country, type, notes
+
+exchange:
+call, rst, class (i/c/s), state/province/country
+
+required:
+id, freq, mode, date, time, call?, rst-sent, class, st, call?, rst-got, class, st

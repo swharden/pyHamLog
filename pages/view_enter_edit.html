@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>
+
+<style type="text/css">
+
+a {color:#FFAA00;text-decoration:none;}
+a:visited {color:#FFAA00;text-decoration:none;}
+a:hover {color:#FFFF00;text-decoration:underline;}
+
+body {
+	color: #FFFFFF;
+	background-color: #003366;
+	font-family: Arial, Helvetica, sans-serif;
+    font-size:12px;
+}
+
+.bigtable {
+	background-color: #000000;
+	border: 1px solid black;
+    margin:20px;
+    margin-left:auto; 
+    margin-right:auto;
+	padding: 0px;
+}
+
+input {
+	border: 1px solid black;
+	padding: 3px;
+}
+
+</style>
+
+</head>
+<body>
+
+<div align="center">
+<b style="font-size:16px;">PyHamLog by AJ4VD</b><br>
+<a href="viewlog" target="data">refresh log</a> |
+<a href="viewlogedit" target="data">edit log</a> |
+<a href="viewscores" target="stat">show scores</a> |
+<a href="freqs.html" target="stat">frequencies</a> |
+<a href="cabrillo.txt" target="_blank">Cabrillo</a> |
+<a href="adif.txt" target="_blank">ADIF</a>
+</div>
+<hr>
+
+<form name="input" action="act-add" method="post" target="data" >
+
+<div align="center">
+<table border="0" cellspacing="0" cellpadding="10" align="center">
+<tr>
+	<td>
+
+		<table>
+			<tr>
+				<td align="right">
+					call:
+				</td>
+				<td>
+					<input type="text" name="call" id="call" value="w4abc" size=5 class="inEditable" onkeypress="document.getElementById('call').style.backgroundColor = '#FFFFFF';">
+					<input name="action" type="submit" value="chk" onClick="parent.stat.location='lookup-'+document.getElementById('call').value;">
+					<a href="javascript:parent.stat.location='http://www.qrz.com/db/'+document.getElementById('call').value;">qrz</a>
+				</td>
+			</tr>	
+			
+			<tr>
+				<td align="right">
+					sent:
+				</td>
+				<td>
+					<input type="text" id="sent" name="sent" value="59" size=1 class="inEditable"> 
+					<a href="javascript:document.getElementById('sent').value = '59';" onClick="void(0)">59</a>,
+					<a href="javascript:document.getElementById('sent').value = '57';" onClick="void(0)">57</a>,
+					<a href="javascript:document.getElementById('sent').value = '55';" onClick="void(0)">55</a>,
+					<a href="javascript:document.getElementById('sent').value = '53';" onClick="void(0)">53</a>
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<td align="right">
+					rcvd:
+				</td>
+				<td>
+					<input type="text" id="got" name="got" value="59" size=1 class="inEditable"> 
+					<a href="javascript:document.getElementById('got').value = '59';" onClick="void(0)">59</a>,
+					<a href="javascript:document.getElementById('got').value = '55';" onClick="void(0)">55</a>,
+					<a href="javascript:document.getElementById('got').value = '53';" onClick="void(0)">53</a>
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<td align="right">
+					class:
+				</td>
+				<td>
+					<input type="text" id="class" name="class" value="I" size=1 class="inEditable"> 
+					<a href="javascript:document.getElementById('class').value = 'I';" onClick="void(0)">Ind</a>,
+					<a href="javascript:document.getElementById('class').value = 'S';" onClick="void(0)">Sch</a>,
+					<a href="javascript:document.getElementById('class').value = 'C';" onClick="void(0)">Clb</a>
+				</td>
+			</tr>
+
+
+			<tr>
+				<td align="right">
+					Loc:
+				</td>
+				<td>
+					<input type="text" name="qth" id="qth" value="AL" size=10 class="inEditable"> 
+					<a href="abrevs.html" target="stat">abr</a>
+				</td>
+			</tr>
+		
+		</table>
+	</td>
+
+	<td align="center">
+		<table>
+			<tr>
+				<td align="right">
+					freq: 
+				</td>
+				<td>
+					<input type="text" name="freq" value="14.206" size=10 class="inEditable">
+				</td>
+			</tr>
+
+			<tr>
+				<td align="right">
+					mode:
+				</td>
+				<td> 
+					<input type="text" name="mode" value="SSB" size=5 class="inEditable"> 
+					<br>
+				</td>
+			</tr>
+
+			<tr>
+				<td align="right">
+					operator:
+				</td>
+				<td>
+					<input type="text" name="operator" value="AJ4VD" size=10 class="inEditable"> 
+					<br>
+				</td>
+			</tr>
+
+			<tr>
+				<td align="right">
+					notes:
+				</td>
+				<td>
+					<input type="text" name="notes" value="" size=10 class="inEditable"> 
+					<br>
+				</td>
+			</tr>
+
+			</tr>
+		</table>
+		<input type="submit" name="action" value="LOG THIS CONTACT" onClick="document.getElementById('call').style.backgroundColor = '#FF6666';document.getElementById('call').select();">
+	</td>
+</td>
+</table>
+</div>
+</form>
+
+
+</body>
+</html>
