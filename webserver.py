@@ -1,9 +1,11 @@
 ## Created 2012 by Scott Harden, AJ4VD
-## Updated October 19, 2014 by Andrew Milluzzi, KK4LWR
+## Updated October 19, 2014 by Andrew Milluzzi, KK4LWR, andy@gatorradio.org
+## Report bugs to: andy@gatorradio.org
 
 ## Edits:
 ## - Fixed bug when running "deleteAll" that cased page not log
 ## - Changed "deleteAll" page to point back to admin panel instead of log
+## - Added instructions for configuring IP address. See comment around line 250
 
 from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandler
 from SocketServer import ThreadingMixIn
@@ -56,7 +58,8 @@ class Handler(BaseHTTPRequestHandler):
             
         elif self.path=="/genfigs":
             os.system('genstats.py')
-            msg="GENERATED!"
+            msg="GENERATED!<br>"
+            msg+='<a href="adminsrock.html">return to admin page</a>'
             
         elif self.path=="/viewops":
             logger=collLogger()
@@ -248,10 +251,12 @@ class Handler(BaseHTTPRequestHandler):
 class ThreadedHTTPServer(ThreadingMixIn, HTTPServer):
     """Handle requests in a separate thread."""
 
+	
+## Edit the section below for your computer IP and port settings
 if __name__ == '__main__':
     myIP='localhost'
     myIP='192.168.1.200'
-    myPort=8081
+    myPort=80
     server = ThreadedHTTPServer((myIP, myPort), Handler)
     print 'Starting server, use <Ctrl-C> to stop'
     print 'http://%s:%d'%(myIP,myPort)
