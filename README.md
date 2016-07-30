@@ -5,7 +5,7 @@ This is an open source python 2.7 project started by Scott Harden, AJ4VD, in
 support of logging for the ARRL School Club Roundup contest.
 
 Currently, the code is maintined by Andrew Milluzzi, KK4LWR. Andrew is
-president of the Gator Amateur Radio Club (gatorradio.org) at the
+president of the [Gator Amateur Radio Club] (gatorradio.org) at the
 University of Florida. Please email any bugs to andy@gatorradio.org.
 
 While originally designed for the ARRL School Club Roundup, additional support
