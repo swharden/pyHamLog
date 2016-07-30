@@ -1,6 +1,6 @@
 # pyHamLog
 
-This is an open source python 2.7 project started by Scott Harden, AJ4VD, in 
+This is an open source python 2.7 project started by [Scott Harden, AJ4VD](http://www.SWHarden.com), in 
 support of logging for the ARRL School Club Roundup contest.
 
 Currently, the code is maintined by Andrew Milluzzi, KK4LWR. Andrew is
